@@ -1,0 +1,228 @@
+
+/***** 01. General *****/
+
+html {
+  height: 100%;
+  font-size: 1rem;
+  width: 100%;
+}
+
+body {
+  color: #fff;
+  font-family: 'Lato', Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  margin: 0 0 35px;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/***** 02. Header *****/
+.transparent {
+  background-color: transparent;
+}
+.dm-logo {
+  background-color: transparent;
+  background-image: url(../img/dm-logo.png);
+  background-repeat: no-repeat;
+  background-size: 125px 22px;
+  border: 0;
+  color: transparent;
+  float: left;
+  font-size: 0;
+  height: 22px;
+  line-height: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-shadow: none;
+  width: 125px;
+}
+
+@media (min-width: 992px) {
+  .dm-logo {
+    background-size: 165px 30px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 165px;
+  }
+}
+
+/***** 03. Nav *****/
+#dm-nav {}
+
+.dm-navbar {
+  background-color: transparent;
+  background-color: rgba(0,0,0,.1);
+}
+.navbar-default {
+  border: none;
+}
+.navbar-brand {
+  height: auto;
+  line-height: 1;
+}
+#main .navbar-nav > li > a {
+  color: #fff;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  padding: 35px 15px;
+  text-transform: uppercase;
+  transition: color .2s;
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+}
+@media (max-width: 991px) {
+  .dm-navbar {
+    background-color: #000;
+    background-color: rgba(0,0,0,1);
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav > li > a {
+    padding: 35px 15px;
+  }
+}
+
+/***** 04. Hero *****/
+.hero {
+  display: table;
+  width: 100%;
+  height: 98%;
+  padding: 100px 0;
+  background-color: #000;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.hero .inner-hero-home {
+  display: table;
+  font-family: 'Cardo', Georgia, serif;
+  height: 100%;
+  padding: 100px 0 80px 0;
+  opacity: 1;
+  position: relative;
+  transition: opacity 350ms ease-out;
+  -webkit-transition: opacity 350ms ease-out;
+  -moz-transition: opacity 350ms ease-out;
+  -o-transition: opacity 350ms ease-out;
+  width: 100%;
+}
+.hero .hero-home-content {
+  color: #fff;
+  display: table-cell;
+  position: relative;
+  padding: 0 20px;
+  pointer-events: none;
+  text-align: center;
+}
+.hero h1.hero-name {
+  font-size: 4.5rem;
+  margin: 0;
+}
+.hero p.hero-title {
+  font-size: 2.125rem;
+  margin-top: 10px;
+}
+.hero p.hero-plus {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 10px 0;
+}
+@media (max-width: 991px) {
+  .hero h1.hero-name {
+    font-size: 3.5rem;
+  }
+  .hero p.hero-title {
+    font-size: 1.185rem;
+  }
+  .hero p.hero-plus {
+    font-size: 2rem;
+  }
+}
+.footer-social {
+  font-size: 0.875rem;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.footer-social span {
+  display: inline-block;
+}
+.footer-social a {
+  color: #42d4ee;
+}
+.footer-social a:active,
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #319fb3;
+  text-decoration: underline;
+}
+
+
+/***** 05. Animated Cursor for Type.js *****/
+.typed-cursor{
+  font-size: 2.125rem;
+  opacity: 1;
+  -webkit-animation: blink 0.9s infinite;
+  -moz-animation: blink 0.9s infinite;
+  animation: blink 0.9s infinite;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+.auto-text {
+  color: #fff;
+  font-family: 'Cardo', Georgia, serif;
+}
+#typed {
+  border-bottom: 4px solid #42d4ee;
+  font-size: 2.125rem;
+  transition: border-color 0.3s ease-in-out 0s;
+}
+@media (max-width: 991px) {
+  #typed {
+    border-bottom: 2px solid #42d4ee;
+    font-size: 1.185rem;
+  }
+  .typed-cursor{
+  font-size: 1.185rem;
+  }
+}
+
+/***** 05. Footer *****/
+.footer {
+  background-color: #000;
+}
+.footer-logo {
+  margin: 0 auto;
+}
+
+
+
+
+/***** MISC Snap MS +320px *****/
+@-ms-viewport{
+  width: device-width;
+}
+
+
+
