@@ -77,7 +77,6 @@
       <!-- End Google Tag Manager -->
 		</head>
 		<body id="top" data-spy="scroll" data-target="#main-nav">
-		{% include tagmanager.html %}
       <!-- Header -->
       <header id="main" class="navbar navbar-default navbar-fixed-top dm-navbar" role="banner">
         <div class="container">
@@ -102,7 +101,7 @@
         </div>
       </header>
       <!-- End Header -->
-	{{ content }}		
+	     {{ content }}		
       <!-- Footer -->
       <footer class="footer">
         <div class="container">
@@ -119,6 +118,7 @@
         </div>
       </footer>
       <!-- End Footer -->
+      {% include tagmanager.html %}
       <!-- JavaScript plugins -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
