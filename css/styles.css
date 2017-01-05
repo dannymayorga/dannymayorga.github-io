@@ -6,223 +6,409 @@ html {
   font-size: 1rem;
   width: 100%;
 }
-
 body {
-  color: #fff;
-  font-family: 'Lato', Arial, sans-serif;
+  background-color: #fff;
+  color: #3f3f3f;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-kerning: auto;
+  font-size: 16px;
+  font-weight: 400;
   height: 100%;
   width: 100%;
 }
-h1 {
-  margin: 0 0 35px;
-  font-family: 'Lato', Arial, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+h1.myName {
+  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+h2.myTitle {
+  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+h2.sectionTitle {
+  font-size: 1.5rem;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+h2.sectionTitle::after {
+    border-bottom: 3px solid #4cdeff;
+    content: "";
+    display: block;
+    margin: 0 auto 20px;
+    padding-bottom: 20px;
+    width: 60px;
+}
+p {
+  margin: 0 0 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+a {
+  color: #4cdeff;
+}
+a:hover,
+a:focus {
+  color: #155765;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  h1.myName {
+    font-size: 4rem;
+  }
+  h1.myTitle {
+    font-size: 2rem;
+  }
+  h2.sectionTitle {
+    font-size: 2.25rem;
+  }
+}
+::selection {
+    background: #4cdeff;
+    color: #373737;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: #4cdeff;
+    color: #373737;
+    text-shadow: none;
+}
+::-webkit-selection {
+    background: #4cdeff;
+    color: #373737;
+    text-shadow: none;
+}
+::o-selection {
+    background: #4cdeff;
+    color: #373737;
+    text-shadow: none;
+}
+.content {
+  padding: 60px 0;
 }
 
 /***** 02. Header *****/
-.transparent {
-  background-color: transparent;
-}
-.dm-logo {
-  background-color: transparent;
-  background-image: url(../img/dm-logo.png);
-  background-repeat: no-repeat;
-  background-size: 125px 22px;
-  border: 0;
-  color: transparent;
-  float: left;
-  font-size: 0;
-  height: 22px;
-  line-height: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-shadow: none;
-  width: 125px;
-}
-
-@media (min-width: 992px) {
-  .dm-logo {
-    background-size: 165px 30px;
-    height: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 165px;
-  }
-}
-
-/***** 03. Nav *****/
-#dm-nav {}
-
-.dm-navbar {
-  background-color: transparent;
-  background-color: rgba(0,0,0,.1);
-}
-.navbar-default {
-  border: none;
-}
 .navbar-brand {
   height: auto;
   line-height: 1;
 }
-#main .navbar-nav > li > a {
-  color: #fff;
-  font-family: 'Lato', Arial, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
+
+/***** 03. Nav *****/
+.navbar-toggle:focus,
+.navbar-toggle:active {
+  outline: none;
+}
+.navbar-toggle {
+  border: none;
+}
+.logo-dm {
+  background-color: transparent;
+  background-image: url(../img/dm-logo.png);
+  background-repeat: no-repeat;
+  background-size: 105px 18px;
+  border: 0;
+  color: transparent;
+  float: left;
+  font-size: 0;
+  height: 18px;
+  line-height: 0;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  outline: none;
+  text-shadow: none;
+  width: 105px;
+}
+.navbar-dm {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.5);
+  font-family: 'Cormorant Garamond', Garamond, serif;
+  margin-bottom: 0;
+}
+.navbar-dm .nav li a {
+  color: #1a2930;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 1.5px;
-  padding: 35px 15px;
+  padding: 10px 0px;
   text-transform: uppercase;
   transition: color .2s;
   -webkit-transition: color .2s;
   -o-transition: color .2s;
 }
-@media (max-width: 991px) {
-  .dm-navbar {
-    background-color: #000;
-    background-color: rgba(0,0,0,1);
+.navbar-dm .nav li a:hover,
+.navbar-dm .nav li a:focus {
+  background-color: transparent;
+  color: #4cdeff;
+  outline: none;
+}
+.navbar-dm .navbar-nav > .active > a {
+  border-radius: 0;
+  color: #4cdeff;
+  background-color: transparent;
+}
+.navbar-dm .navbar-nav > .active > a:hover,
+.navbar-dm .navbar-nav > .active > a:focus {
+  color: #4cdeff;
+  background-color: transparent;
+}
+.navbar-social .fa-github,
+.navbar-social .fa-linkedin,
+.navbar-social .fa-twitter {
+  font-size: 1rem;
+}
+.navbar-social #nav-github,
+.navbar-social #nav-linkedin,
+.navbar-social #nav-twitter {
+  padding-left:25px;
+  padding-right:25px; 
+
+}
+@media (min-width: 768px) {
+  .navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 140px;
+    text-align: center;
+  }
+  .navbar .container .navbar-brand-centered,
+  .navbar .container-fluid .navbar-brand-centered {
+    margin-left: -70px;
   }
 }
-
-@media (min-width: 992px) {
-  .navbar-nav > li > a {
-    padding: 35px 15px;
+@media (max-width: 767px) {
+  .logo-dm {
+    margin-left: 20px;
+  } 
+  .navbar-dm .nav li a {
+    text-align: center;
   }
 }
-
+@media (min-width: 768px) {
+  .logo-dm {
+    background-size: 140px 24px;
+    height: 24px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    width: 140px;
+  }  
+  .navbar-dm .nav li a {
+    padding: 25px 15px;
+  }  
+  .navbar-dm  {
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+    padding: 25px 0;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  .navbar-dm .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-dm .navbar-nav > .active > a {
+    border-radius: 0;
+  }
+  .navbar-dm.affix {
+    background-color: rgba(253, 253, 253, 1);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.05);
+    padding: 0;
+  }
+  .navbar-dm.affix .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) and (max-width:991px) {
+  .navbar-dm .nav li a {
+    padding: 25px 10px;
+  }  
+}
 /***** 04. Hero *****/
-.hero {
-  display: table;
-  width: 100%;
-  height: 98%;
-  padding: 100px 0;
-  background-color: #000;
+.welcome {
+  background: url('/img/bg-temp.jpg') no-repeat bottom center scroll;
+  background-color: #fff;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}
-.hero .inner-hero-home {
+  color: #3f3f3f;
   display: table;
-  font-family: 'Cardo', Georgia, serif;
-  height: 100%;
-  padding: 100px 0 80px 0;
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+/*** Future BKG
+.welcome {
+  animation: colorchange 30s ease infinite;
+  -moz-animation: colorchange 30s ease infinite;   
+  -webkit-animation: colorchange 30s ease infinite;
+}
+***/
+@keyframes colorchange {
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+@-webkit-keyframes colorchange {
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+
+.welcome .inner {
+  display: table-cell;
+  display: inline-block;
+  padding: 300px 0 80px 0;
   opacity: 1;
-  position: relative;
   transition: opacity 350ms ease-out;
+  vertical-align: middle;
   -webkit-transition: opacity 350ms ease-out;
   -moz-transition: opacity 350ms ease-out;
   -o-transition: opacity 350ms ease-out;
-  width: 100%;
 }
-.hero .hero-home-content {
-  color: #fff;
-  display: table-cell;
-  position: relative;
-  padding: 0 20px;
-  pointer-events: none;
-  text-align: center;
-}
-.hero h1.hero-name {
-  font-size: 4.5rem;
-  margin: 0;
-}
-.hero p.hero-title {
-  font-size: 2.125rem;
-  margin-top: 10px;
-}
-.hero p.hero-plus {
-  font-size: 3rem;
-  line-height: 1;
-  margin: 10px 0;
-}
-@media (max-width: 991px) {
-  .hero h1.hero-name {
-    font-size: 3.5rem;
-  }
-  .hero p.hero-title {
-    font-size: 1.185rem;
-  }
-  .hero p.hero-plus {
-    font-size: 2rem;
-  }
-}
-.footer-social {
-  font-size: 0.875rem;
-  padding: 10px 0;
-  text-transform: uppercase;
-}
-.footer-social span {
-  display: inline-block;
-}
-.footer-social a {
-  color: #42d4ee;
-}
-.footer-social a:active,
-.footer-social a:hover,
-.footer-social a:focus {
-  color: #319fb3;
-  text-decoration: underline;
-}
-
-
-/***** 05. Animated Cursor for Type.js *****/
 .typed-cursor{
-  font-size: 2.125rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   opacity: 1;
-  -webkit-animation: blink 0.9s infinite;
-  -moz-animation: blink 0.9s infinite;
-  animation: blink 0.9s infinite;
-}
-@keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
-}
-@-moz-keyframes blink{
-  0% { opacity:1; }
-  50% { opacity:0; }
-  100% { opacity:1; }
 }
 .auto-text {
-  color: #fff;
-  font-family: 'Cardo', Georgia, serif;
+  color: #3f3f3f;
+  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-weight: 300;
 }
 #typed {
-  border-bottom: 4px solid #42d4ee;
-  font-size: 2.125rem;
+  border-bottom: 5px solid #4cdeff;
+  font-size: 2.5rem;
+  letter-spacing: -1.25px;
   transition: border-color 0.3s ease-in-out 0s;
 }
-@media (max-width: 991px) {
-  #typed {
-    border-bottom: 2px solid #42d4ee;
-    font-size: 1.185rem;
+@media (max-width: 767px) {
+  .welcome .inner {
+    padding: 150px 0 80px 0;
+  }
+}
+@media (min-width: 768px) {
+  .welcome {
+    height: 100%;
+    padding: 0;
   }
   .typed-cursor{
-  font-size: 1.185rem;
+    font-size: 3rem;
+  }
+  #typed {
+    font-size: 3rem;
   }
 }
+.dm-btn {
+  box-shadow: 0 2px 5px 0 rgba(153, 153, 153, 0.2);
+  cursor: pointer;
+  transition-property: box-shadow, background-color;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-property: box-shadow, background-color;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-delay: 0s;
+}
+.dm-btn:hover {
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+}
+.material-btn:focus,
+.material-btn:active {
+  outline: none;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-circle {
+  background: #fff;
+  border: 2px solid #f5f5f5;
+  border-radius: 100%;
+  color: #4cdeff;
+  font-size: 40px;
+  height: 70px;
+  margin-top: 75px;
+  padding: 8px 16px;
+  width: 70px;
+}
+.btn-circle:hover,
+.btn-circle:focus {
+  background-color: #efefef;
+  color: #4cdeff;;
+  outline: none;
+}
+/***** 05. About *****/
+#about {
+  background-color: #010112;
+  color: #fff;
+}
+#about p {
+  font-weight: 200;
+}
+#funFacts {
+  background-color: #f3f3f3;
+}
 
-/***** 05. Footer *****/
+/***** 06. About *****/
+#resume h2.resumeTitle {
+  margin-top: 0;
+}
+#resume h3.roleTitle {
+  margin-top: 7;
+}
+#summary, 
+#experience, 
+#education {
+  border-bottom: 1px solid #4cdeff; 
+  margin-bottom: 20px;
+}
+
+/***** 07. Contact *****/
+#contact {
+  background-color: #333;
+  color: #fff;
+  font-weight: 200;
+  text-align: center;
+}
+
+#contact #social-links {
+  font-size: 3rem;
+}
+#contact #social-links a:hover,
+#contact #social-links a:focus {
+  color: #155765;
+}
+
+/***** 08. Footer *****/
 .footer {
   background-color: #000;
+  color: #fff;
+  font-weight: 200;
 }
-.footer-logo {
-  margin: 0 auto;
+#bottom-footer .fa-heart {
+  color: #e74c3c;
+}
+.footer p {
+  margin: 20px 0 10px 0;
 }
 
-
-
-
+/***** 10. Other CSS Assets *****/
 /***** MISC Snap MS +320px *****/
 @-ms-viewport{
   width: device-width;
 }
-
-
-
