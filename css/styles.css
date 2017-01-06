@@ -9,7 +9,7 @@ html {
 body {
   background-color: #fff;
   color: #3f3f3f;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-kerning: auto;
   font-size: 16px;
   font-weight: 400;
@@ -17,7 +17,7 @@ body {
   width: 100%;
 }
 h1.myName {
-  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-family: 'Lora', Garamond, serif;
   font-size: 2.25rem;
   font-weight: 300;
   letter-spacing: normal;
@@ -25,7 +25,7 @@ h1.myName {
   text-transform: uppercase;
 }
 h2.myTitle {
-  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-family: 'Lora', Garamond, serif;
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: normal;
@@ -34,7 +34,7 @@ h2.myTitle {
 }
 h2.sectionTitle {
   font-size: 1.5rem;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: -1.5px;
   text-align: center;
@@ -129,7 +129,7 @@ a:focus {
 .navbar-dm {
   background-color: #fff;
   border-bottom: 1px solid rgba(153, 153, 153, 0.5);
-  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-family: 'Lora', Garamond, serif;
   margin-bottom: 0;
 }
 .navbar-dm .nav li a {
@@ -289,7 +289,7 @@ a:focus {
 }
 .auto-text {
   color: #3f3f3f;
-  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-family: 'Lora', Garamond, serif;
   font-weight: 300;
 }
 #typed {
@@ -354,8 +354,8 @@ a:focus {
 }
 /***** 05. About *****/
 #about {
-  background-color: #010112;
-  color: #fff;
+  background-color: #fff;
+  color: #373737;
 }
 #about p {
   font-weight: 200;
