@@ -113,18 +113,18 @@ a:focus {
   background-color: transparent;
   background-image: url(../img/dm-logo.png);
   background-repeat: no-repeat;
-  background-size: 105px 18px;
+  background-size: 213px 20px;
   border: 0;
   color: transparent;
   float: left;
   font-size: 0;
-  height: 18px;
+  height: 20px;
   line-height: 0;
   margin-top: 20px;
   margin-bottom: 15px;
   outline: none;
   text-shadow: none;
-  width: 105px;
+  width: 213px;
 }
 .navbar-dm {
   background-color: #fff;
@@ -194,11 +194,11 @@ a:focus {
 }
 @media (min-width: 768px) {
   .logo-dm {
-    background-size: 140px 24px;
-    height: 24px;
+    background-size: 265px 25px;
+    height: 25px;
     margin-top: 22px;
     margin-bottom: 22px;
-    width: 140px;
+    width: 265px;
   }  
   .navbar-dm .nav li a {
     padding: 25px 15px;
