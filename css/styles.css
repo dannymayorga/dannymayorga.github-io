@@ -8,11 +8,11 @@ html {
 }
 body {
   background-color: #fff;
-  color: #3f3f3f;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  color: #373737;
+  font-family: 'Lato', Arial, sans-serif;
   font-kerning: auto;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   height: 100%;
   width: 100%;
 }
@@ -25,21 +25,34 @@ h1.myName {
   text-transform: uppercase;
 }
 h2.myTitle {
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   font-family: 'Cormorant Garamond', Garamond, serif;
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: normal;
   margin: 0 0 10px;
+  padding: 10px 0;
   text-transform: uppercase;
 }
 h2.sectionTitle {
-  font-size: 1.5rem;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 2.125rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+p.sectionSubtitle {
+  color: #acacac;
+  font-size: 1.15rem;
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: 300;
-  letter-spacing: -1.5px;
+  font-style: italic;
+  margin-top: 10px;
   text-align: center;
 }
-h2.sectionTitle::after {
+h2.sectionTitle:: {
     border-bottom: 3px solid #4cdeff;
     content: "";
     display: block;
@@ -48,51 +61,56 @@ h2.sectionTitle::after {
     width: 60px;
 }
 p {
-  margin: 0 0 25px;
+  margin: 0 0 20px 0;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 a {
-  color: #4cdeff;
+  color: #373737;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: #155765;
+  color: #4cdeff;
   text-decoration: underline;
 }
 @media (min-width: 768px) {
   h1.myName {
     font-size: 4rem;
   }
-  h1.myTitle {
+  h2.myTitle {
     font-size: 2rem;
   }
   h2.sectionTitle {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
+  h3.sectionSubtitle {
+    font-size: 1.125rem;
+  }  
 }
 ::selection {
     background: #4cdeff;
-    color: #373737;
+    color: #fff;
     text-shadow: none;
 }
 ::-moz-selection {
     background: #4cdeff;
-    color: #373737;
+    color: #fff;
     text-shadow: none;
 }
 ::-webkit-selection {
     background: #4cdeff;
-    color: #373737;
+    color: #fff;
     text-shadow: none;
 }
 ::o-selection {
     background: #4cdeff;
-    color: #373737;
+    color: #fff;
     text-shadow: none;
 }
 .content {
-  padding: 60px 0;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 60px 0 40px 0;
 }
 
 /***** 02. Header *****/
@@ -108,36 +126,38 @@ a:focus {
 }
 .navbar-toggle {
   border: none;
+  color:#fff;
 }
 .logo-dm {
   background-color: transparent;
-  background-image: url(../img/dm-logo.png);
+  background-image: url(../img/dm-logo-m.png);
   background-repeat: no-repeat;
-  background-size: 105px 18px;
+  background-size: 213px 20px;
   border: 0;
   color: transparent;
   float: left;
   font-size: 0;
-  height: 18px;
+  height: 20px;
   line-height: 0;
   margin-top: 20px;
   margin-bottom: 15px;
   outline: none;
   text-shadow: none;
-  width: 105px;
+  width: 213px;
 }
 .navbar-dm {
-  background-color: #fff;
+  background-color: #000;
   border-bottom: 1px solid rgba(153, 153, 153, 0.5);
-  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-family: 'Lato', Arial, sans-serif;
   margin-bottom: 0;
 }
 .navbar-dm .nav li a {
-  color: #1a2930;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  color: #fff;
+  font-size: 0.750rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   padding: 10px 0px;
+  text-decoration: none;
   text-transform: uppercase;
   transition: color .2s;
   -webkit-transition: color .2s;
@@ -147,17 +167,20 @@ a:focus {
 .navbar-dm .nav li a:focus {
   background-color: transparent;
   color: #4cdeff;
+  text-decoration: none;
   outline: none;
 }
 .navbar-dm .navbar-nav > .active > a {
   border-radius: 0;
   color: #4cdeff;
   background-color: transparent;
+  text-decoration: none;
 }
 .navbar-dm .navbar-nav > .active > a:hover,
 .navbar-dm .navbar-nav > .active > a:focus {
-  color: #4cdeff;
   background-color: transparent;
+  color: #4cdeff;
+  text-decoration: none;
 }
 .navbar-social .fa-github,
 .navbar-social .fa-linkedin,
@@ -194,11 +217,11 @@ a:focus {
 }
 @media (min-width: 768px) {
   .logo-dm {
-    background-size: 140px 24px;
-    height: 24px;
+    background-size: 265px 25px;
+    height: 25px;
     margin-top: 22px;
     margin-bottom: 22px;
-    width: 140px;
+    width: 265px;
   }  
   .navbar-dm .nav li a {
     padding: 25px 15px;
@@ -207,7 +230,7 @@ a:focus {
     background: transparent;
     border-bottom: none;
     box-shadow: none;
-    padding: 25px 0;
+    padding: 50px 0 25px 0;
     transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
     -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -222,8 +245,8 @@ a:focus {
     border-radius: 0;
   }
   .navbar-dm.affix {
-    background-color: rgba(253, 253, 253, 1);
-    border-bottom: 1px solid rgba(153, 153, 153, 0.05);
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(153, 153, 153, 0.25);
     padding: 0;
   }
   .navbar-dm.affix .navbar-brand {
@@ -237,13 +260,13 @@ a:focus {
 }
 /***** 04. Hero *****/
 .welcome {
-  background: url('/img/bg-temp.jpg') no-repeat bottom center scroll;
-  background-color: #fff;
+  background: url() no-repeat bottom center scroll;
+  background-color: #000;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  color: #3f3f3f;
+  color: #fff;
   display: table;
   height: auto;
   text-align: center;
@@ -274,13 +297,21 @@ a:focus {
 .welcome .inner {
   display: table-cell;
   display: inline-block;
-  padding: 300px 0 80px 0;
+  padding: 280px 0 80px 0;
   opacity: 1;
   transition: opacity 350ms ease-out;
   vertical-align: middle;
   -webkit-transition: opacity 350ms ease-out;
   -moz-transition: opacity 350ms ease-out;
   -o-transition: opacity 350ms ease-out;
+}
+.social {
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+#social-links {
+  display: inline-block;
 }
 .typed-cursor{
   font-size: 2.5rem;
@@ -289,7 +320,7 @@ a:focus {
 }
 .auto-text {
   color: #3f3f3f;
-  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-family: 'Lora', Garamond, serif;
   font-weight: 300;
 }
 #typed {
@@ -298,14 +329,78 @@ a:focus {
   letter-spacing: -1.25px;
   transition: border-color 0.3s ease-in-out 0s;
 }
+.hero-buttons {
+  display: inline-block;
+  margin-top: 40px;
+}
+.btn-default {
+  background: #4cdeff;
+  border: 2px solid #4cdeff;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.75;
+  padding: 15px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-default:hover,
+.btn-default:focus {
+  background: #155765;
+  border: 2px solid #155765;
+  color: #fff;
+  text-decoration: none;
+}
+.btn-download {
+  background: transparent;
+  border: 2px solid #4cdeff;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.75;
+  padding: 15px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-download:hover,
+.btn-download:focus {
+  background: #155765;
+  border: 2px solid #155765;
+  color: #fff;
+  text-decoration: none;
+}
 @media (max-width: 767px) {
   .welcome .inner {
     padding: 150px 0 80px 0;
   }
+  .hero-buttons {
+    margin-top: 20px;
+  }
+  .btn-default {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .btn-download {
+    margin-top: 40px;
+    width: 100%;
+  }
+  .social {
+    margin-bottom: 40px;
+    margin-top: 60px;
+  }
 }
 @media (min-width: 768px) {
   .welcome {
-    height: 100%;
+    height: 80%;
     padding: 0;
   }
   .typed-cursor{
@@ -315,62 +410,43 @@ a:focus {
     font-size: 3rem;
   }
 }
-.dm-btn {
-  box-shadow: 0 2px 5px 0 rgba(153, 153, 153, 0.2);
-  cursor: pointer;
-  transition-property: box-shadow, background-color;
-  transition-duration: 0.2s;
-  transition-delay: 0s;
-  transition-timing-function: ease-in;
-  -webkit-transition-duration: 0.2s;
-  -webkit-transition-property: box-shadow, background-color;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-transition-delay: 0s;
-}
-.dm-btn:hover {
-  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
-}
-.material-btn:focus,
-.material-btn:active {
-  outline: none;
-  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
-}
-.btn-circle {
-  background: #fff;
-  border: 2px solid #f5f5f5;
-  border-radius: 100%;
-  color: #4cdeff;
-  font-size: 40px;
-  height: 70px;
-  margin-top: 75px;
-  padding: 8px 16px;
-  width: 70px;
-}
-.btn-circle:hover,
-.btn-circle:focus {
-  background-color: #efefef;
-  color: #4cdeff;;
-  outline: none;
-}
+
+
+
+
 /***** 05. About *****/
 #about {
-  background-color: #010112;
-  color: #fff;
+  background-color: #fff;
+  color: #373737;
 }
 #about p {
-  font-weight: 200;
+  font-weight: 300;
 }
 #funFacts {
-  background-color: #f3f3f3;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
-/***** 06. About *****/
+/***** 06. Resume *****/
 #resume h2.resumeTitle {
+  font-family: 'Cormorant Garamond', Garamond, serif;
   margin-top: 0;
 }
 #resume h3.roleTitle {
-  margin-top: 7;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 5px;
 }
+#resume em {
+  font-weight: 200;
+}
+.company-logo {
+  display: inline-block;
+  height: 60px;
+  width: auto;
+}
+
 #summary, 
 #experience, 
 #education {
@@ -380,31 +456,37 @@ a:focus {
 
 /***** 07. Contact *****/
 #contact {
-  background-color: #333;
+  background-color: #000;
+  border-bottom: none;
   color: #fff;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
-}
-
-#contact #social-links {
-  font-size: 3rem;
-}
-#contact #social-links a:hover,
-#contact #social-links a:focus {
-  color: #155765;
 }
 
 /***** 08. Footer *****/
 .footer {
-  background-color: #000;
+  background-color: #373737;
   color: #fff;
-  font-weight: 200;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 300;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a:hover,
+.footer a:focus {
+  color: #4cdeff;
+  text-decoration: underline;
 }
 #bottom-footer .fa-heart {
   color: #e74c3c;
 }
-.footer p {
-  margin: 20px 0 10px 0;
+#top-footer p {
+  margin: 20px 0 5px 0;
+}
+#bottom-footer p {
+  margin: 5px 0 20px 0;
 }
 
 /***** 10. Other CSS Assets *****/
