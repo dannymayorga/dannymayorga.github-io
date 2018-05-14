@@ -79,10 +79,10 @@ a:focus {
 }
 @media (min-width: 768px) {
   h1.myName {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h2.myTitle {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   h2.sectionTitle {
     font-size: 2rem;
