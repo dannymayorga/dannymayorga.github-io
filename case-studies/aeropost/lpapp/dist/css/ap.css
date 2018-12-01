@@ -1,0 +1,86 @@
+
+/* -----------------------------------
+  IE 10 / Windows 8 / Windows Phone 8 fix
+------------------------------------- */
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+
+/* -----------------------------------
+  Header
+------------------------------------- */
+.skin-blue .main-header .logo {
+    background-color: #003364;
+}
+.skin-blue .main-header .navbar {
+    background-color: #0054a4;
+}
+
+/* -----------------------------------
+  User Header
+------------------------------------- */
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+    height: auto;
+}
+.btnAdd {
+ font-size: 16px;
+ font-weight: 700;
+ margin-bottom: 20px;
+}
+.btnBack {
+ font-size: 14px;
+ font-weight: 700;
+ margin-bottom: 20px;
+}
+.btnNext {
+ font-size: 14px;
+ font-weight: 700;
+ margin-bottom: 20px;
+}
+.btn-flat {
+    background-color: #dedede;
+    width: 100%;
+}
+
+/* -----------------------------------
+  Tables
+------------------------------------- */
+.content-header > .breadcrumb {
+    background: none;
+}
+/* -----------------------------------
+  Tables
+------------------------------------- */
+
+.edit {
+  color: #337ab7;
+  font-weight: 600;
+}
+ .edit:hover, .edit:active, .edit:focus {
+    color: #337ab7;
+    outline: medium none;
+    text-decoration: underline;
+}
+.dup {
+  color: #1BBC9B;
+  font-weight: 600;
+}
+ .dup:hover, .dup:active, .dup:focus {
+    color: #1BBC9B;
+    outline: medium none;
+    text-decoration: underline;
+}
+.delete {
+  color: #dd4b39;
+  font-weight: 600;
+}
+ .delete:hover, .delete:active, .delete:focus {
+    color: #dd4b39;
+    outline: medium none;
+    text-decoration: underline;
+}
+
