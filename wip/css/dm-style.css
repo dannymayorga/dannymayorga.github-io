@@ -1,0 +1,19 @@
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* DM Logo */
+.dm-nav {
+    color: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dm-logo {
+    height: auto;
+    width: 72px;
+}
