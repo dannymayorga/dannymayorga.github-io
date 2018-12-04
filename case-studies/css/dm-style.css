@@ -17,3 +17,7 @@ body {
     height: auto;
     width: 72px;
 }
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+}
