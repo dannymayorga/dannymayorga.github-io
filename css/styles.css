@@ -15,6 +15,9 @@ body {
   height: 100%;
   width: 100%;
 }
+.invisible {
+  display: none;
+}
 h1.myName {
   font-size: 2rem;
   font-weight: 400;
@@ -44,14 +47,6 @@ p.sectionSubtitle {
   font-style: italic;
   margin-top: 10px;
   text-align: center;
-}
-h2.sectionTitle:: {
-    border-bottom: 3px solid #4cdeff;
-    content: "";
-    display: block;
-    margin: 0 auto 20px;
-    padding-bottom: 20px;
-    width: 60px;
 }
 p {
   margin: 0 0 20px 0;
