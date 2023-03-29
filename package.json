@@ -2,7 +2,7 @@
   "name": "product-dev-content-gen",
   "version": "1.0.0",
   "description": "A content generation app for product development teams using Express.js and ChatGPT API",
-  "main": "server.js",
+  "main": "prototype/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
