@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 // Define a route to handle requests to the root URL ("/") and serve the index.html file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "prototype", "public", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/generate-content", async (req, res) => {
