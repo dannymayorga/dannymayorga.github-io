@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    color: #5a5a5a;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    color: #5a5a5a;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+  
