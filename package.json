@@ -1,0 +1,36 @@
+{
+  "name": "product-dev-content-gen",
+  "version": "1.0.0",
+  "description": "A content generation app for product development teams using Express.js and ChatGPT API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannymayorga/dannymayorga.github-io.git"
+  },
+  "keywords": [
+    "product",
+    "management",
+    "content",
+    "generation",
+    "user",
+    "stories",
+    "express",
+    "chatgpt",
+    "gpt",
+    "ai",
+    "product",
+    "development"
+  ],
+  "author": "Danny Mayorga",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dannymayorga/dannymayorga.github-io/issues"
+  },
+  "homepage": "https://github.com/dannymayorga/dannymayorga.github-io#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
