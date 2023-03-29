@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const fetch = require("node-fetch");
 
 require("dotenv").config();
 
@@ -15,6 +14,10 @@ app.get("/generate-content", async (req, res) => {
   const apiKey = process.env.CHATGPT_API_KEY;
 
   try {
+    // Use dynamic import() to import node-fetch
+    const nodeFetch = await import('node-fetch');
+    const fetch = nodeFetch.default;
+
     const response = await fetch("https://api.openai.com/v1/engines/davinci-codex/completions", {
       method: "POST",
       headers: {
