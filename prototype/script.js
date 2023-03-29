@@ -1,31 +1,31 @@
-async function generateUserStory(prompt) {
-    const apiKey = "your_api_key_here"; // Replace with your API key
-    const response = await fetch("https://api.openai.com/v1/engines/davinci-codex/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        prompt: prompt,
-        max_tokens: 50,
-        n: 1,
-        stop: null,
-        temperature: 0.5,
-      }),
-    });
-  
-    const data = await response.json();
-    return data.choices[0].text.trim();
-  }
-  
-  document.getElementById("userStoryForm").addEventListener("submit", async function (event) {
+document.addEventListener("DOMContentLoaded", function () {
+  const submitBtn = document.querySelector("#submit");
+  const outputPane = document.querySelector(".output-pane");
+
+  submitBtn.addEventListener("click", async function (event) {
     event.preventDefault();
-  
-    const inputPrompt = document.getElementById("inputPrompt").value;
-  
-    const userStory = await generateUserStory(inputPrompt);
-  
-    document.getElementById("output").innerHTML = `<h2>Generated User Story</h2><p>${userStory}</p>`;
+
+    const longForm = document.querySelector("#long-form").value;
+    const shortForm = document.querySelector("#short-form").value;
+
+    try {
+      const response = await fetch(`/generate-content?longForm=${encodeURIComponent(longForm)}&shortForm=${encodeURIComponent(shortForm)}`);
+
+      const data = await response.json();
+
+      if (data && data.choices && data.choices.length > 0) {
+        const aiGeneratedContent = data.choices[0].text;
+        outputPane.innerHTML = aiGeneratedContent;
+      } else {
+        handleError("Error: Unable to generate content.");
+      }
+    } catch (error) {
+      handleError("Error fetching ChatGPT:", error);
+    }
   });
-  
+});
+
+function handleError(message, error) {
+  console.error(message, error);
+  // You can add additional error handling logic here, such as displaying an error message to the user.
+}
