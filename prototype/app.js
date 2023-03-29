@@ -7,11 +7,12 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 
-app.use(express.static("public"));
+// Serve static files from the 'prototype' directory
+app.use(express.static("prototype"));
 
 // Define a route to handle requests to the root URL ("/") and serve the index.html file
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "prototype", "index.html"));
 });
 
 app.get("/generate-content", async (req, res) => {
