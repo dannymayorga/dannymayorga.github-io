@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 require("dotenv").config();
 
@@ -7,6 +8,11 @@ const app = express();
 app.use(cors());
 
 app.use(express.static("public"));
+
+// Define a route to handle requests to the root URL ("/") and serve the index.html file
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 app.get("/generate-content", async (req, res) => {
   const { longForm, shortForm } = req.query;
