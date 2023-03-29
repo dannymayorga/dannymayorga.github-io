@@ -1,36 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  h1 {
-    color: #5a5a5a;
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    font-size: 18px;
-    color: #5a5a5a;
-    margin-bottom: 10px;
-  }
-  
-  textarea {
-    width: 100%;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
-    resize: vertical;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.input-pane,
+.output-pane {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.input-pane {
+  border-right: 1px solid #ccc;
+}
+
+.output-pane {
+  border-left: 1px solid #ccc;
+}
+
+/* Optional style enhancements */
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  resize: none; /* Disables resizing of textarea */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}

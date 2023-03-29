@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.get("/generate-content", async (req, res) => {
   const { longForm, shortForm } = req.query;
 
-  const apiKey = process.env.YOUR_API_KEY;
+  const apiKey = process.env.CHATGPT_API_KEY;
 
   try {
     const response = await fetch("https://api.openai.com/v1/engines/davinci-codex/completions", {
