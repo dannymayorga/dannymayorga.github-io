@@ -1,1 +1,0 @@
-web: node prototype/app.js

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const shortForm = document.querySelector("#short-form").value;
 
     try {
-      const response = await fetch(`/generate-content?longForm=${encodeURIComponent(longForm)}&shortForm=${encodeURIComponent(shortForm)}`);
+      const response = await fetch(`https://shrouded-garden-80049.herokuapp.com/generate-content?longForm=${encodeURIComponent(longForm)}&shortForm=${encodeURIComponent(shortForm)}`);
 
       const data = await response.json();
 
